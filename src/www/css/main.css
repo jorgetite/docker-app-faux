@@ -8,9 +8,33 @@ html {
   
 body {
     font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #fafaff;
+    color: #fdfdfd;
     line-height: 1.5;
+    background-color: #25252c;
+}
+
+body.blue {
     background-color: #158df7;
+}
+
+body.green {
+    background-color: #20bc71;
+}
+
+body.red {
+    background-color: #e91b3e;
+}
+
+body.purple {
+    background-color: #7b2ed7;
+}
+
+body.yellow {
+    background-color: #f0ac01;
+}
+
+body.magenta {
+    background-color: #e91d8d;
 }
 
 h1,
@@ -23,7 +47,8 @@ h2 {
 }
 
 h1 {
-    font-size: 3.0em; 
+    font-size: 3.25em;
+    letter-spacing: 0.08em;
 }
   
 h2 {
