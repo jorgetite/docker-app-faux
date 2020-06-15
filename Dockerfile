@@ -4,7 +4,7 @@ FROM nginx
 # build arguments.
 ARG BUILD_DATE
 ARG BUILD_VERSION
-ARG APP_VARIANT=none
+ARG APP_VARIANT=black
 
 # Labels.
 LABEL org.label-schema.schema-version="1.0" \
@@ -20,4 +20,4 @@ LABEL org.label-schema.schema-version="1.0" \
 COPY ./src/www /usr/share/nginx/html
 
 # Sets the variant class for the home page
-RUN /bin/sed -i "s/{{variant}}/$APP_VARIANT/" /usr/share/nginx/html/index.html
+RUN /bin/sed -i "s/{{variant}}/${APP_VARIANT}/" /usr/share/nginx/html/index.html
