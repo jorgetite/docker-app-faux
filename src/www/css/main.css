@@ -25,12 +25,12 @@ body.red {
     background-color: #e91b3e;
 }
 
-body.purple {
-    background-color: #7b2ed7;
-}
-
 body.yellow {
     background-color: #f0ac01;
+}
+
+body.purple {
+    background-color: #7b2ed7;
 }
 
 body.magenta {
@@ -83,8 +83,30 @@ section {
     text-align: center;
 }
 
-.logo {
+.icon {
     font-size: 5em;
+}
+
+.icon-black::before {
+    content: "\f6be";
+}
+.icon-blue::before {
+    content: "\f4fb";
+}
+.icon-green::before {
+    content: "\f52e";
+}
+.icon-red::before {
+    content: "\f5d1";
+}
+.icon-yellow::before {
+    content: "\f185";
+}
+.icon-purple::before {
+    content: "\f6fc";
+}
+.icon-magenta::before {
+    content: "\f56b";
 }
 
 @media (min-width: 768px) {

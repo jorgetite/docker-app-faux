@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Hello World</title>
+    <title>{{variant}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
@@ -11,10 +11,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <link rel="manifest" href="./site.webmanifest">
 
-    <link href="https://unpkg.com/ress/dist/ress.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/ress.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/solid.min.css">
     <link rel="stylesheet" href="css/main.css">
-
-    <script src="https://kit.fontawesome.com/b8979339d8.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="{{variant}}">
@@ -22,7 +22,9 @@
         <section>
             <div class="content">
                 <h1>Hello World!</h1>
-                <div class="logo"><i class="fas fa-user-astronaut"></i></div>
+                <div class="icon">
+                    <i class="fas icon-{{variant}}"></i>
+                </div>
                 <h2>{{variant}} service</h2>
                 <p>A simple service running on a custom nginx image.</p>
             </div>
