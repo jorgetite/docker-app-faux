@@ -1,5 +1,5 @@
 # base image
-FROM nginx:stable
+FROM nginx:latest
 
 # build arguments.
 ARG BUILD_DATE
