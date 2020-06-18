@@ -3,7 +3,7 @@ FROM nginx:stable
 
 # build arguments.
 ARG BUILD_DATE
-ARG BUILD_VERSION
+ARG BUILD_VERSION=v0.1
 ARG APP_VARIANT=black
 
 # Labels.
