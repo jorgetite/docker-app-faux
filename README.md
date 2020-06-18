@@ -17,21 +17,20 @@ The variant images can be used to quickly spawn containers for learning, testing
 ### Arguments
 There are three build arguments:
 
-* `BUILD_DATE`* - Used to label the image with the build date of the image (org.label-schema.build-date)
+* `BUILD_DATE` - Used to label the image with the build date of the image (org.label-schema.build-date) (Required)
 * `BUILD_VERSION` - Used to label the image with build version (org.label-schema.version)
 * `APP_VARIANT` - Used to create the app variant.
 
-(*) Required.
 
 ### Building a variant
-Use the following command to build the blue variant:
+The following command builds the blue image variant:
 ```Shell
-docker build --no-cache --rm --tag myrepo/nginx:stable.blue --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --build-arg BUILD_VERSION=v0.1 --build-arg APP_VARIANT=green .
+docker build --tag myrepo/nginx:blue --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --build-arg APP_VARIANT=green .
 ```
 
-Use the following command to build the green variant:
+The following command builds the green image variant and specifies a BUILD_VERSION:
 ```Shell
-docker build --no-cache --rm --tag myrepo/nginx:stable.green --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --build-arg BUILD_VERSION=v0.1 --build-arg APP_VARIANT=green .
+docker build --tag myrepo/nginx:stable.green --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --build-arg BUILD_VERSION=1.0 --build-arg APP_VARIANT=green .
 ```
 
 
