@@ -1,5 +1,5 @@
 # Docker App Faux
-Docker App Faux creates a docker image based on [nginx:stable](https://hub.docker.com/_/nginx) that mocks a simple web app. The Dockerfile allows to create up to seven variants of the image; that is seven variants of the web app.
+Docker App Faux creates a docker image based on [nginx:latest](https://hub.docker.com/_/nginx) that mocks a simple web app. The Dockerfile allows to create up to seven variants of the image; that is seven variants of the web app.
 
 The variant images can be used to quickly spawn containers for learning, testing or demonstration purposes.
 
