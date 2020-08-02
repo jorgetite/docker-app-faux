@@ -1,10 +1,10 @@
 # base image
-FROM nginx:latest
+FROM nginx:alpine
 
 # build arguments.
 ARG BUILD_DATE
 ARG BUILD_VERSION=v0.1
-ARG APP_VARIANT=black
+ARG VARIANT="black"
 
 # Labels.
 LABEL org.label-schema.schema-version="1.0" \
@@ -19,5 +19,16 @@ LABEL org.label-schema.schema-version="1.0" \
 # Copy static files
 COPY ./src/www /usr/share/nginx/html
 
-# Sets the variant class for the home page
-RUN /bin/sed -i "s/{{variant}}/${APP_VARIANT}/" /usr/share/nginx/html/index.html
+# Sets the variant for the home page
+RUN /bin/sed -i "s|{{variant}}|$VARIANT|" /usr/share/nginx/html/index.html
+
+# Environment variables
+ENV WEBFAUX_BASE_PATH="/"
+
+# Copy custom entrypoint script
+COPY ./src/docker/entrypoint.sh /webfaux-docker-entrypoint.sh
+ENTRYPOINT ["/webfaux-docker-entrypoint.sh"]
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
